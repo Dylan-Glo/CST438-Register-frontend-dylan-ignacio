@@ -29,7 +29,7 @@ class Semester extends Component {
         renderCell: (params) => (
           <div>
             <Radio
-              checked={params.row.id == this.state.selected}
+              checked={params.row.id === this.state.selected}
               onChange={this.onRadioClick}
               value={params.row.id}
               color="default"
@@ -61,6 +61,11 @@ class Semester extends Component {
                       semester:SEMESTER_LIST[this.state.selected].name}} 
                 variant="outlined" color="primary" style={{margin: 10}}>
                 Get Schedule
+              </Button>
+              <Button component={Link} 
+                      to={{pathname:'/student' }} 
+                variant="outlined" color="primary" style={{margin: 10}}>
+                Add Student
               </Button>
           </div>
       </div>
